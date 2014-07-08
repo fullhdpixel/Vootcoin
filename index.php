@@ -197,6 +197,10 @@
 	</section>
 </div>
 
+<ul class="nav pull-right scroll-top">
+    <li><a class="" href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+</ul>
+
 <script>
 /*
 $('body').scrollSpy();
