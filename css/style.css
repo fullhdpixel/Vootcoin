@@ -2,6 +2,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14px;
 }
 
 h1 {
@@ -12,7 +13,7 @@ h1 {
 }
 
 h2 {
-	font-size: 2em;
+	font-size: 3.5em;
 	margin: 0 0 18px 0;
 	font-family: arial,helvetica;
 }
@@ -20,8 +21,22 @@ h2 {
 nav  {
 	background-color: black !important;
 	font-weight: 300 !important;
+	font-size: 14px !important;
 	margin: 0 0 50px 0 !important;
 	position: fixed;
+    line-height: 50px;
+    height: 50px;
+    padding-top: 0;
+}
+
+.row {
+	margin-top: 100px;
+}
+
+.slide img {
+	z-index: -9999;
+	width: 100%;
+	height: auto;
 }
 
 .navbar-trans li > a:hover, .navbar-trans li > a:focus, .navbar-trans li.active {
@@ -83,8 +98,7 @@ img {
 	line-height: 1.6em;
 }
 
-/* Section 0
-* --------------------------------------- */
+/* Section 0 */
 #slide1, #slide2, #slide3, #slide4, #slide5  {
 	margin-top: 0px;
 }
@@ -93,8 +107,7 @@ img {
 	height: 100%;
 }
 
-/* Section 1
-* --------------------------------------- */
+/* Section 1 */
 #section1 img{
 	position:absolute;
 	left: 40px;
@@ -127,7 +140,7 @@ img {
 	height: 100%;
 }
 
-/*screen resolutions between 620px and 800px*/
+/* screen resolutions between 620px and 800px */
 @media all and (min-width: 620px) and (max-width: 800px){
 	#section1 .imgsContainer{
 		margin-top: -278px;
@@ -137,7 +150,7 @@ img {
 	}
 }
 
-/*screen resolutions lower than 620px*/
+/* screen resolutions lower than 620px */
 @media all and (max-width: 620px){
 	#section1 .imgsContainer{
 		margin-top: -208px;
@@ -181,15 +194,12 @@ img {
 	transform: translate3d(548px, 0px, 0px);
 }
 
-/* Section 2
-* --------------------------------------- */
+/* Section 2 */
 #section2 img{
 	position:absolute;
 }
 
-#section2 .imgsContainer,
-#staticImg .imgsContainer,
-#section3 .imgsContainer{
+#section2 .imgsContainer, #section3 .imgsContainer{
 	position: absolute;
 	z-index: 1;
 	left: 50%;
@@ -209,8 +219,7 @@ img {
 	top: 50%;
 }
 
-#section2.moveDown .imgsContainer,
-#staticImg .imgsContainer{
+#section2.moveDown .imgsContainer, #staticImg .imgsContainer{
 	top: 90%;
 }
 
@@ -260,12 +269,15 @@ img {
 	-o-transition: all 0.7s ease-out;
 	transition: all 0.7s ease-out;
 }
+
 #staticImg.moveDown{
 	top: 300%;
 }
+
 #staticImg.moveDown .imgsContainer{
-		top: 50%;
+	top: 50%;
 }
+
 #staticImg.moveDown img{
 	top: 155px;
 }
@@ -274,13 +286,11 @@ img {
 	top: 50%;
 }
 
-
 #staticImg.active img{
 	top: 487px;
 }
 
-/* Section 3
-* --------------------------------------- */
+/* Section 3 */
 #section3 .imgsContainer{
 	top: 50%;
 }
@@ -296,8 +306,7 @@ img {
 	margin: 10% 0 0 0;
 }
 
-/* Overwriting fullPage.js tooltip color
-* --------------------------------------- */
+/* Overwriting fullPage.js tooltip color */
 .fp-tooltip{
 	color: #AAA;
 }
