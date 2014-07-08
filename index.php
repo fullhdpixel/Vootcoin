@@ -39,16 +39,17 @@
 	<!-- JS imports -->
 	<script type="text/javascript" src="./js/fullPage.js"></script>
 	<script type="text/javascript" src="./js/script.js"></script>
+	<script type="text/javascript" src="./js/slimscroll.min.js"></script>
 	
 	<script type="text/javascript">
-		$(document).ready(function() {
+		$(document).ready(function() {		
 			$('#content').fullpage({
 				'verticalCentered': false,
 				'css3': true,
 				'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
 				'navigation': true,
 				'navigationPosition': 'left',
-				'navigationTooltips': ['Home', 'Section2', 'Section3', 'Section4'],
+				'navigationTooltips': ['Home', 'Section1', 'Section2', 'Section3'],
 
 				'afterLoad': function(anchorLink, index){
 					if(index == 2){
@@ -86,27 +87,17 @@
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav nav-justified">
-				<li id="active"><a href="./index.html"><i class="fa fa-home fa-fw"></i> Home</a></li>
-				<li><a href="./community.html"><i class="fa fa-group fa-fw"></i> Community</a></li>
-				<li><a href="./text.html">VeriSMS</a></li>
-				<li><a href="./verifund.html">VeriFund</a></li>
-				<li><a href="./interest.html">Interest</a></li>
-				<li><a href="./paperwallet.html">Paper Wallet</a></li>
-				<li><a href="./verisend.html">VeriSend</a></li>
-				<li><a href="./veribit.html">VeriBit</a></li>
-				<li><a href="./incubator.html">Incubator</a></li>
+				<li id="active"><a href="#section0">Home</a></li>
+				<li><a href="#section1">Section1</a></li>
+				<li><a href="#section2">Section2</a></li>
+				<li><a href="#section3">Section3</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Exchanges <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="http://www.bitonyx.com/market/trade/VRC-BTC" target="_blank">Bitonyx</a></li>
-						<li><a href="https://www.bittrex.com/Market/?MarketName=BTC-VRC" target="_blank">Bittrex</a></li>
-						<li><a href="https://bter.com/trade/vrc_btc" target="_blank">Bter</a></li>
-						<li><a href="https://coinnext.com/trade/VRC/BTC" target="_blank">Coinnext</a></li>
-						<li><a href="https://www.cryptsy.com/markets/view/209" target="_blank">Cryptsy</a></li>
-						<li><a href="https://c-cex.com/?p=vrc-btc&amp;rf=08CAB0B01CBED626" target="_blank">C-cex </a></li>
-						<li><a href="https://www.icurrex.com/market/18" target="_blank">Icurrex</a></li>
-						<li><a href="https://www.mintpal.com/market/VRC/BTC" target="_blank">Mintpal</a></li>
-						<li><a href="https://poloniex.com/exchange/btc_vrc" target="_blank">Poloniex</a></li>
+						<li>Page1</li>
+						<li>Page2</li>
+						<li>Page3</li>
+						<li>Page4</li>
 					</ul>
 				</li>
 			</ul>
@@ -172,7 +163,16 @@
 
 </div>
 
+<script>
+$('body').slimScroll({
+	position: 'right',
+	height: '1050px',
+	railVisible: true,
+	alwaysVisible: true,
+});
 
+	$('a').smoothscroll();
+</script>
 
 </body>
 </html>

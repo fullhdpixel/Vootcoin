@@ -1,12 +1,6 @@
-#demosMenu{
-position:fixed;
-bottom: 10px;
-right:10px;
-z-index: 999;
-}
-
 body {
-	color: #333;
+	padding: 0;
+	margin: 0;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 }
 
@@ -24,13 +18,14 @@ h2 {
 }
 
 nav  {
-	background-color: #308BE1 !important;
-	font-weight: 900 !important;
+	background-color: black !important;
+	font-weight: 300 !important;
 	margin: auto;
+	position: fixed;
 }
 
 .navbar-trans li > a:hover, .navbar-trans li > a:focus, .navbar-trans li.active {
-	background-color:#38afef !important;
+	background-color: grey !important;
 }
 
 .navbar-trans {
@@ -38,19 +33,19 @@ nav  {
 }
 
 .navbar-trans a{
-    color:#fefefe !important;
+    color: #fefefe !important;
 }
 
 .navbar-trans li {
 	white-space: nowrap;
 }
 
-.navbar-header span{
+.navbar-header span {
 	color: black;
 }
 
-.navbar-nav.nav-justified > li{
-    float:none;
+.navbar-nav.nav-justified > li {
+    float: none;
 }
 
 .nav-justified {
