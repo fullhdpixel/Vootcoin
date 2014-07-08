@@ -202,18 +202,8 @@
 </ul>
 
 <script>
-/*
+$('a').smoothScroll();
 $('body').scrollSpy();
-
-$('body').slimScroll({
-	position: 'right',
-	height: '1050px',
-	railVisible: true,
-	alwaysVisible: true,
-});
-
-$('a').smoothscroll();
-*/
 </script>
 
 </body>
