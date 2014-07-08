@@ -49,6 +49,7 @@
 				'css3': true,
 				'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
 				'navigation': false,
+				'loopBottom': true,
 				'easing': 'easeInQuart',
 				'sectionsColor': ['white', 'black', 'white', 'black', '#white'],
 				'navigationPosition': 'left',
@@ -107,11 +108,6 @@
 	</div>
 </nav>	
 
-<!-- Intro -->	  
-<div id="intro">
-
-</div>
-
 <div id="content">
 	<section class="section" id="about">
 	    <div class="slide" id="slide1" data-anchor="slide1">
@@ -140,11 +136,11 @@
 		<div class="container">
 			<div class="row">
 				<h2>Features</h2>
-				<h3><small>Everything a VootCoin user needs to meet his/her core security objectives more effectively.</small></h3>
+				<h3><small>Everything a VootCoin user needs to meet core security objectives more effectively.</small></h3>
 			</div>
 		</div>
 		<div class="slide" id="slide1" data-anchor="slide1">
-			<div class="">
+			<div class="container">
 				<div class="intro">
 					<h2>Decentralized Anonymity</h2>
 					<p>
@@ -155,44 +151,30 @@
 			</div>
 
 			<div class="slide" id="slide2" data-anchor="slide2">
-				<h1>Slide 2</h1>
-				<!--
-				<div class="imgsContainer">
-					<img src="http://placehold.it/350x670" alt="iphone" id="iphone2" />
-					<img src="http://placehold.it/350x670" alt="iphone" id="iphone3" />
-					<img src="http://placehold.it/350x670" alt="iphone" id="iphone4" />
-				</div>
-				-->
+				<h1></h1>
 			</div>
 			<div class="slide" id="slide3" data-anchor="slide3">
-				<h1>Slide 3</h1>
+				<h1></h1>
 			</div>
 			<div class="slide" id="slide4" data-anchor="slide4">
-				<h1>Slide 4</h1>
+				<h1></h1>
 			</div>
 			<div class="slide" id="slide5" data-anchor="slide5">
-				<h1>Slide 5</h1>
+				<h1></h1>
 			</div>
 		</div>
 	</section>
 	<section class="section moveDown" id="downloads">
-		<div class="wrap">
-			<!--
-			<div class="imgsContainer">
-				<img src="http://placehold.it/350x670" alt="iphone" id="iphone-yellow" />
-				<img src="http://placehold.it/350x670" alt="iphone" id="iphone-red" />
-				<img src="http://placehold.it/670x350" alt="iphone" id="iphone-blue" />
-			</div>
-			-->
+		<div class="intro">
 			<div class="box">
-				<h2></h2>
+				<h2>Downloads</h2>
 			</div>
 		</div>
 	</section>
 	<section class="section moveDown" id="exchanges">
-		<div class="wrap">
+		<div class="intro">
 			<div class="box">
-				<h2></h2>
+				<h2>Exchanges</h2>
 			</div>
 		</div>
 		<!--
@@ -202,9 +184,9 @@
 		-->
 	</section>
 	<section class="section" id="contact">
-		<div class="wrap">
+		<div class="intro">
 			<div class="box">
-				<h2></h2>
+				<h2>Contact</h2>
 			</div>
 		</div>
 		<!--
@@ -215,12 +197,10 @@
 	</section>
 </div>
 
-<div id="footer">
-
-</div>
-
 <script>
 /*
+$('body').scrollSpy();
+
 $('body').slimScroll({
 	position: 'right',
 	height: '1050px',
