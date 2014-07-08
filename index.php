@@ -45,10 +45,12 @@
 	<script type="text/javascript">
 		$(document).ready(function() {		
 			$('#content').fullpage({
-				'verticalCentered': false,
+				'verticalCentered': true,
 				'css3': true,
 				'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
 				'navigation': true,
+				'easing': 'easeInQuart',
+				'sectionsColor': ['white', 'black', 'white', 'black', '#white'],
 				'navigationPosition': 'left',
 				'navigationTooltips': ['Home', 'Section1', 'Section2', 'Section3'],
 
@@ -88,14 +90,13 @@
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav nav-justified">
-				<li id="active"><a href="#slide0">Home</a></li>
-				<li><a href="#slide1">Slide 1</a></li>
+				<li id="active"><a href="#slide1">Home</a></li>
 				<li><a href="#slide2">Slide 2</a></li>
 				<li><a href="#slide3">Slide 3</a></li>
 				<li><a href="#slide4">Slide 4</a></li>
 				<li><a href="#slide5">Slide 5</a></li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Exchanges <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Exchanges<b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li>Page1</li>
 						<li>Page2</li>
@@ -123,9 +124,9 @@
 	<div class="section" id="section0">
 	    <div class="slide" id="slide1" data-anchor="slide1">
 			<div class="intro">
-				<h1>Clickable</h1>
+				<h1>Home</h1>
 				<p>
-					You can even click on the navigation and jump directly to another section.
+					Main slide.
 				</p>
 			</div>
 		</div>

@@ -86,7 +86,7 @@ img {
 /* Section 0
 * --------------------------------------- */
 #slide1, #slide2, #slide3, #slide4, #slide5  {
-	margin-top: 150px;
+	margin-top: 0px;
 }
 
 #section0 img {
