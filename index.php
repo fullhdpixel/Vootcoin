@@ -46,6 +46,7 @@
 		$(document).ready(function() {		
 			$('#content').fullpage({
 				'verticalCentered': true,
+				'autoScrolling': true,
 				'css3': true,
 				'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
 				'navigation': false,
@@ -76,7 +77,7 @@
 		});
 	</script>
 </head>
-<body data-spy="scroll" data-offset="0" data-target="#myScrollspy">
+<body data-spy="scroll" data-offset="0">
 
 <nav class="navbar-default navbar-static-top navbar-trans" role="navigation">
 	<div class="container-fluid">
@@ -141,26 +142,40 @@
 		</div>
 		<div class="slide" id="slide1" data-anchor="slide1">
 			<div class="container">
-				<div class="intro">
-					<h2>Decentralized Anonymity</h2>
-					<p>
-						Crypto-currencies are based on a blockchain and non-anonymity; transactions are always signed by the coin owner and thus the transaction chain includes information of the coin origins. There have been suggestions to hide this information
-						and one already supported but not implemented is CoinJoin based transaction grouping. Nitesend is a decentralized implementation of this proposal.
-					</p>
-				</div>
+				<h2>Decentralized Anonymity</h2>
+				<img src="./images/anon.png" />
+				<p>
+					Crypto-currencies are based on a blockchain and non-anonymity; transactions are always signed by the coin owner and thus the transaction chain includes information of the coin origins. There have been suggestions to hide this information
+					and one already supported but not implemented is CoinJoin based transaction grouping. Nitesend is a decentralized implementation of this proposal.
+				</p>
 			</div>
+		</div>
 
-			<div class="slide" id="slide2" data-anchor="slide2">
-				<h1></h1>
+		<div class="slide" id="slide2" data-anchor="slide2">
+			<div class="container">
+				<h2>VootMarket</h2>
+				<img src="./images./vootmarket.png" alt="VootMarket" />
+				<p>
+					VootMarket will be a fully operational decentralized marketplace using anonymous P2P payments in VootCoin. The marketplace will be a place to buy and sell goods from all over the world in a safe, open-source environment with an integrated escrow system based on a Web of Trust (WoT).
+				</p>
 			</div>
-			<div class="slide" id="slide3" data-anchor="slide3">
-				<h1></h1>
+		</div>
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<div class="container">
+				<h2>VootPay</h2>
+				<img src="./images/vootpay.png" alt="VootPay" />
+				<p>
+					VootPay is a Point of Sale system where merchants can sell items in return for VootCoin. Merchants will have a VootPay account which is paired with an exchange to place an automatic VootCoin sell order in exchange for Bitcoin. Merchants will be a major part of the Voot ecosystem.
+				</p>
 			</div>
-			<div class="slide" id="slide4" data-anchor="slide4">
-				<h1></h1>
-			</div>
-			<div class="slide" id="slide5" data-anchor="slide5">
-				<h1></h1>
+		</div>
+		<div class="slide" id="slide4" data-anchor="slide4">
+			<div class="container">
+				<h2>Secure Network</h2>
+				<img src="./images/secure.png" alt="Secure Network" />
+				<p>
+					With TOR backbone integration, your Internet connection to the VootCoin network will be fully secured on the TOR platform with one easy-to-use client-based security, proxy and VPN services for users.
+				</p>
 			</div>
 		</div>
 	</section>
@@ -168,6 +183,43 @@
 		<div class="intro">
 			<div class="box">
 				<h2>Downloads</h2>
+				<div class="col-sm-6 col-md-3">
+					<div class="caption text-center">
+						<img src="./images/source.png" /img>
+						<h3>Source</h3>
+						<p>
+							<a href="" class="btn btn-primary" role="button" target="_blank">Develop</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<div class="caption text-center">
+						<img src="./images/windows.png" />
+						<h3>Windows</h3>
+						<p></p>
+						<p>
+							<a href="" class="btn btn-primary" role="button" target="_blank">Download</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<div class="caption text-center">
+						<img src="./images/mac.png" />
+						<h3>Mac</h3>
+						<p>
+							<a href="" class="btn btn-primary" role="button" target="_blank">Download</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<div class="caption text-center">
+						<img src="./images/linux.png" />
+						<h3>Voot mobile</h3>
+						<p>
+							<a href="" class="btn btn-primary" role="button" target="_blank">Download</a>
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -175,6 +227,34 @@
 		<div class="intro">
 			<div class="box">
 				<h2>Exchanges</h2>
+				<div class="col-sm-6 col-md-4">
+					<div class="caption text-center">
+						<img src="./images/source.png" />
+						<h3>Bittrex</h3>
+						<p>
+							<a href="" class="btn btn-primary" role="button" target="_blank">Develop</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="caption text-center">
+						<img src="./images/windows.png" />
+						<h3>Bluetrade</h3>
+						<p></p>
+						<p>
+							<a href="" class="btn btn-primary" role="button" target="_blank">Download</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="caption text-center">
+						<img src="./images/mac.png" />
+						<h3>Coins-e</h3>
+						<p>
+							<a href="" class="btn btn-primary" role="button" target="_blank">Download</a>
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!--
@@ -186,7 +266,36 @@
 	<section class="section" id="contact">
 		<div class="intro">
 			<div class="box">
-				<h2>Contact</h2>
+				<h2>Contact us</h2>
+				
+				<div class="col-sm-6 col-md-4">
+					<div class="caption text-center">
+						<img src="./images/source.png" />
+						<h3>Facebook</h3>
+						<p>
+							<img src="" />
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="caption text-center">
+						<img src="./images/windows.png" />
+						<h3>Twitter</h3>
+						<p></p>
+						<p>
+							<img src="" />
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="caption text-center">
+						<img src="" />
+						<h3>Mail</h3>
+						<p>
+							<img scrc="" />
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!--
@@ -204,6 +313,11 @@
 <script>
 $('a').smoothScroll();
 $('body').scrollSpy();
+
+/* smooth scrolling for scroll to top */
+$('.scroll-top').click(function() {
+	$('body,html').animate({scrollTop:0},1000);
+});
 </script>
 
 </body>
