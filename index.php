@@ -40,6 +40,7 @@
 	<script type="text/javascript" src="./js/fullPage.js"></script>
 	<script type="text/javascript" src="./js/script.js"></script>
 	<script type="text/javascript" src="./js/slimscroll.min.js"></script>
+	<script type="text/javascript" src="./js/smoothscroll.min.js"></script>
 	
 	<script type="text/javascript">
 		$(document).ready(function() {		
@@ -87,10 +88,12 @@
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav nav-justified">
-				<li id="active"><a href="#section0">Home</a></li>
-				<li><a href="#section1">Section1</a></li>
-				<li><a href="#section2">Section2</a></li>
-				<li><a href="#section3">Section3</a></li>
+				<li id="active"><a href="#slide0">Home</a></li>
+				<li><a href="#slide1">Slide 1</a></li>
+				<li><a href="#slide2">Slide 2</a></li>
+				<li><a href="#slide3">Slide 3</a></li>
+				<li><a href="#slide4">Slide 4</a></li>
+				<li><a href="#slide5">Slide 5</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Exchanges <b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -118,7 +121,27 @@
 	</div>
 
 	<div class="section" id="section0">
-		<img src="http://placehold.it/1920x1080" alt="iphone" />
+	    <div class="slide" id="slide1" data-anchor="slide1">
+			<div class="intro">
+				<h1>Clickable</h1>
+				<p>
+					You can even click on the navigation and jump directly to another section.
+				</p>
+			</div>
+		</div>
+
+	    <div class="slide" id="slide2" data-anchor="slide2">
+			<h1>Slide 2</h1>
+		</div>
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<h1>Slide 3</h1>
+		</div>
+		<div class="slide" id="slide4" data-anchor="slide4">
+			<h1>Slide 4</h1>
+		</div>
+		<div class="slide" id="slide5" data-anchor="slide5">
+			<h1>Slide 5</h1>
+		</div>
 	</div>
 	<div class="section" id="section1">
 		<div class="wrap">
@@ -164,6 +187,7 @@
 </div>
 
 <script>
+/*
 $('body').slimScroll({
 	position: 'right',
 	height: '1050px',
@@ -171,7 +195,8 @@ $('body').slimScroll({
 	alwaysVisible: true,
 });
 
-	$('a').smoothscroll();
+$('a').smoothscroll();
+*/
 </script>
 
 </body>

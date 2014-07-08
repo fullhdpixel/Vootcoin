@@ -20,7 +20,7 @@ h2 {
 nav  {
 	background-color: black !important;
 	font-weight: 300 !important;
-	margin: auto;
+	margin: 0 0 50px 0 !important;
 	position: fixed;
 }
 
@@ -85,7 +85,8 @@ img {
 
 /* Section 0
 * --------------------------------------- */
-#section0 {
+#slide1, #slide2, #slide3, #slide4, #slide5  {
+	margin-top: 150px;
 }
 
 #section0 img {
