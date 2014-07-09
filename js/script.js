@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+	
+	
 	if ($('#features').is(':visible')) {
 		setTimeout(function() {
 			$('#features img').addClass('anim');

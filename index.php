@@ -44,7 +44,12 @@
 	<script type="text/javascript" src="./js/smoothscroll.min.js"></script>
 	
 	<script type="text/javascript">
-		$(document).ready(function() {		
+		$(document).ready(function() {
+		
+			$('#signup').hide();
+			$('#contact h2, #contact h3').hide();
+			$('#facebook, #twitter, #mail, #reddit').hide();
+			
 			$('#content').fullpage({
 				'verticalCentered': true,
 				'autoScrolling': false,
@@ -59,21 +64,45 @@
 				'navigationTooltips': ['Home', 'Section1', 'Section2', 'Section3'],
 
 				'afterLoad': function(anchorLink, index){
-					if(index == 2){
-						$('#iphone3, #iphone2, #iphone4').addClass('active');
+					/*
+					
+					/* Downloads */
+					if(index == 3) {
+						setTimeout(function() {
+							$('#source, #windows, #mac, #linux').addClass('flip');
+						}, 500);
+					}
+					
+					/* Exchanges */
+					if(index == 4) {
+						
+					}
+					
+					/* Contact */
+					if(index == 5) {
+						setTimeout(function() {
+							$('#facebook, #twitter, #mail, #reddit').show();
+							$('#contact h2, #contact h3').slideDown(450, function() {});
+							$('#facebook, #twitter, #mail, #reddit').addClass('flip');
+						}, 500);
+						setTimeout(function() {
+							$('#signup').fadeIn("slow", function() {});
+						}, 550);
 					}
 				},
 
 				'onLeave': function(index, nextIndex, direction){
 					if (index == 3 && direction == 'down'){
-						$('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
+						setTimeout(function() {
+							$('#source, #windows, #mac, #linux').removeClass('flip');
+						}, 500);
 					}
-					else if(index == 3 && direction == 'up'){
-						$('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
+					else if(index == 5 && direction == 'up'){
+						$('#facebook, #twitter, #mail, #reddit').hide();
+						$('#contact h2, #contact h3').hide();
+						$('#facebook, #twitter, #mail, #reddit').removeClass('flip');
+						$('#signup').hide();
 					}
-
-					$('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
-					$('#staticImg').toggleClass('moveDown', index == 3 && direction == 'down');
 				}
 			});
 		});
@@ -188,7 +217,7 @@
 				<h2>Downloads</h2>
 				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
-						<img src="./images/source.png" /img>
+						<img id="src" src="./images/source.png" /img>
 						<h3>Source</h3>
 						<p>
 							<a href="" class="btn btn-primary" role="button" target="_blank">Develop</a>
@@ -197,7 +226,7 @@
 				</div>
 				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
-						<img src="./images/windows.png" />
+						<img id="windows" src="./images/windows2.png" />
 						<h3>Windows</h3>
 						<p></p>
 						<p>
@@ -207,7 +236,7 @@
 				</div>
 				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
-						<img src="./images/mac.png" />
+						<img id="mac" src="./images/apple.png" />
 						<h3>Mac</h3>
 						<p>
 							<a href="" class="btn btn-primary" role="button" target="_blank">Download</a>
@@ -216,7 +245,7 @@
 				</div>
 				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
-						<img src="./images/linux.png" />
+						<img id="linux" src="./images/phone.png" />
 						<h3>Voot mobile</h3>
 						<p>
 							<a href="" class="btn btn-primary" role="button" target="_blank">Learn more</a>
@@ -227,7 +256,42 @@
 		</div>
 	</section>
 	<section class="section" id="exchanges">
-		
+		<h2>Exchanges</h2>
+		<div class="row row-centered">
+			<div class="col-sm-6 col-md-3 col-centered">
+				<div class="thumbnail">
+					<img src="http://placehold.it/300x300" alt="...">
+					<div class="caption">
+						<h3>Bittrex</h3>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Visit now</a>
+					</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-centered">
+				<div class="thumbnail">
+					<img src="http://placehold.it/300x300" alt="...">
+					<div class="caption">
+						<h3>Bittrex</h3>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Visit now</a>
+					</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-centered">
+				<div class="thumbnail">
+					<img src="http://placehold.it/300x300" alt="...">
+					<div class="caption">
+						<h3>Bittrex</h3>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Visit now</a>
+					</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 		<!--
 		<div class="imgsContainer">
@@ -244,7 +308,7 @@
 					<div class="caption text-center">
 						<h3>Facebook</h3>
 						<p>
-							<img src="./images/facebook.png" />
+							<img id="facebook" src="./images/facebook.png" />
 						</p>
 					</div>
 				</div>
@@ -252,7 +316,7 @@
 					<div class="caption text-center">
 						<h3>Twitter</h3>
 						<p>
-							<img src="./images/twitter.png" />
+							<img id="twitter" src="./images/twitter.png" />
 						</p>
 						<!--
 						<div id="twitter">
@@ -268,20 +332,38 @@
 					<div class="caption text-center">
 						<h3>Mail</h3>
 						<p>
-							<img src="./images/mail.png" />
+							<img id="mail" src="./images/mail.png" />
 						</p>
 					</div>
-				</div><div class="col-sm-6 col-md-3">
+				</div>
+				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
 						<h3>Reddit</h3>
 						<p>
-							<img src="./images/reddit.png" />
+							<img id="reddit" src="./images/reddit.png" />
 						</p>
 						<!--
 						<div id="reddit">
 							<script src="http://www.reddit.com/r/vootcoin.embed?limit=5" type="text/javascript"></script>
 						</div>
 						-->
+					</div>
+				</div>
+				<div class="row" id="signup">
+					<div class="col-sm-2 col-md-4">
+					</div>
+					<div class="col-sm-8 col-md-4">
+						<div class="account-wall">
+							<form class="form-signin">
+								<input type="email" class="form-control" placeholder="Email" required autofocus>
+								<hr>
+								<button class="btn btn-lg btn-primary btn-block" type="submit">
+									Sign up
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="col-sm-2 col-md-4">
 					</div>
 				</div>
 			</div>
