@@ -1,9 +1,29 @@
+@media (max-width:910px) {
+	#features img {
+		max-width: 100px !important;
+	}
+}
+
+@media (max-width:768px) {
+	#features img {
+		max-width: 75px !important;
+	}
+}
+
+@media (max-width:480px){
+	#features img {
+		max-width: 50px !important;
+	}
+
+}
+
 /* main */
 body,html {
 	padding: 0;
 	margin: 0;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 	font-size: 14px;
+	min-width: 480px;
 }
 
 h1 {
@@ -25,16 +45,52 @@ nav  {
 	background-color: black !important;
 	font-weight: 500 !important;
 	font-size: 22px !important;
-    line-height: 50px !important;
-    height: 50px !important;
+    line-height: 60px !important;
+    height: 60px !important;
     padding-top: 0;
 }
 
-img {
-	-webkit-transition: all 0.7s ease-out;
-	-moz-transition: all 0.7s ease-out;
-	-o-transition: all 0.7s ease-out;
-	transition: all 0.7s ease-out;
+/* animations */
+.anim {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation: zoomIn 1s;
+    animation: zoomIn 1s;
+}
+
+.flip {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation: flipInX 1s;
+    animation: flipInX 1s;
+}
+
+#downloads img {
+	max-width: 100px;
+	height: auto;
+}
+
+#features img:hover, #downloads img:hover, #contact img:hover {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation: pulse 2s;
+    animation: pulse 2s;
+}
+
+/* sliders */
+
+.homesliders h2, .homesliders p {
+	z-index: 99;
+}
+
+.homesliders img {
+	z-index: -99;
 }
 
 .slide img {
@@ -72,7 +128,7 @@ img {
 	left: 10%;
 	right: 10%;
 	max-width: 80%;
-	display:inline-block;
+	display: inline-block;
 }
 
 .section {
@@ -80,28 +136,22 @@ img {
 	overflow:hidden;
 }
 
-.section div {
-	margin-top: 50px;
+/* Features */
+#features .row {
+	margin-top: 60px;
 }
 
-/* Features */
+#features .slide {
+	margin-top: -150px;
+}
+
+#features h2, #features p {
+	position: relative;
+	left: 15%;
+	max-width: 70%;
+}
+
 #features img {
 	max-width: 150px;
 	height: auto;
 }
-
-
-.scroll-top {
-	position:fixed;
-	bottom:0;
-	right:6%;
-	z-index:100;
-	background: #f2f3f2;
-	font-size:24px;
-	border-top-left-radius:3px;
-	border-top-right-radius:3px;
-}
-
-.scroll-top a:link, .scroll-top a:visited {
-	color:#222;
-} 

@@ -23,6 +23,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="./css/fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="./css/general.css" />
+	<link rel="stylesheet" type="text/css" href="./css/animate.css" />
 	
 	<!-- Bootstrap -->
 	<link href="./lib/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -34,7 +35,7 @@
 	<!-- Animate -->
 	<link href="./css/style.css" rel="stylesheet" type="text/css">
 	
-	<title></title>
+	<title>Vootcoin | Decentralized and Anonymous</title>
 	
 	<!-- JS imports -->
 	<script type="text/javascript" src="./js/fullPage.js"></script>
@@ -46,13 +47,14 @@
 		$(document).ready(function() {		
 			$('#content').fullpage({
 				'verticalCentered': true,
-				'autoScrolling': true,
+				'autoScrolling': false,
 				'css3': true,
 				'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
 				'navigation': false,
 				'loopBottom': true,
+				'loopTop': true,
 				'easing': 'easeInQuart',
-				'sectionsColor': ['white', 'black', 'white', 'black', '#white'],
+				'sectionsColor': ['', '#2672EC', '#BF1E4B', '#2672EC', '#BF1E4B'],
 				'navigationPosition': 'left',
 				'navigationTooltips': ['Home', 'Section1', 'Section2', 'Section3'],
 
@@ -89,7 +91,6 @@
 			<span class="icon-bar"></span>
 		</button>
 	</div>
-
 	<div class="collapse navbar-collapse" id="myScrollspy">
 		<ul class="nav navbar-nav nav-justified">
 			<li id="active"><a href="#about">About</a></li>
@@ -97,32 +98,35 @@
 			<li><a href="#downloads">Downloads</a></li>
 			<li><a href="#exchanges">Exchanges</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Exchanges<b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="https://bittrex.com/Market/?MarketName=BTC-VOOT" target="_blank">Bittrex</a></li>
-					<li><a href="" target="_blank">Bluetrade</a></li>
-					<li><a href="" target="_blank">Coins-e</a></li>
-				</ul>
-			</li>
 		</ul>
 	</div>
-</nav>	
+</nav>
 
 <div id="content">
-	<section class="section" id="about">
+	<section class="homeslider section" id="about">
 	    <div class="slide" id="slide1" data-anchor="slide1">
 			<div class="intro">
-				<img src="./images/1.jpg" />
-				<h1>Home</h1>
+				<img src="./images/1.jpg" alt="background1" />
+				<h1>Specifications</h1>
 				<p>
-					Main slide.
+					PoW Algorithm: X11<br>
+					PoW + PoS.<br>
+					60 second block time<br>
+					30 confirmations for blocks to mature.<br>
+					Re-target difficulty each block.<br>
+					PoW Total Blocks: 10080 PoW blocks.<br>
+					PoW Payout: 10000 per block.<br>
+					PoW Max Coins: 68,000,000<br>
+					PoS Interest: 10%<br>
 				</p>
 			</div>
 		</div>
 	    <div class="slide" id="slide2" data-anchor="slide2">
 			<img src="./images/2.jpg" />
-			<h1>Slide 2</h1>
+			<h1>Decentralized Privacy Powered by NiteSend.</h1>
+			<p>
+				VootCoin powered by NiteSend provides high level anonymous layers to the transactions on the VootCoin network. With your privacy in mind, we have created a decentralized way of using digital currency.
+			</p>
 		</div>
 		<div class="slide" id="slide3" data-anchor="slide3">
 			<img src="./images/3.jpg" />
@@ -143,14 +147,13 @@
 		<div class="slide" id="slide1" data-anchor="slide1">
 			<div class="container">
 				<h2>Decentralized Anonymity</h2>
-				<img src="./images/anon.png" />
+				<img class="bounceUp" src="./images/anon.png" />
 				<p>
 					Crypto-currencies are based on a blockchain and non-anonymity; transactions are always signed by the coin owner and thus the transaction chain includes information of the coin origins. There have been suggestions to hide this information
 					and one already supported but not implemented is CoinJoin based transaction grouping. Nitesend is a decentralized implementation of this proposal.
 				</p>
 			</div>
 		</div>
-
 		<div class="slide" id="slide2" data-anchor="slide2">
 			<div class="container">
 				<h2>VootMarket</h2>
@@ -216,47 +219,16 @@
 						<img src="./images/linux.png" />
 						<h3>Voot mobile</h3>
 						<p>
-							<a href="" class="btn btn-primary" role="button" target="_blank">Download</a>
+							<a href="" class="btn btn-primary" role="button" target="_blank">Learn more</a>
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="section moveDown" id="exchanges">
-		<div class="intro">
-			<div class="box">
-				<h2>Exchanges</h2>
-				<div class="col-sm-6 col-md-4">
-					<div class="caption text-center">
-						<img src="./images/source.png" />
-						<h3>Bittrex</h3>
-						<p>
-							<a href="" class="btn btn-primary" role="button" target="_blank">Develop</a>
-						</p>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="caption text-center">
-						<img src="./images/windows.png" />
-						<h3>Bluetrade</h3>
-						<p></p>
-						<p>
-							<a href="" class="btn btn-primary" role="button" target="_blank">Download</a>
-						</p>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="caption text-center">
-						<img src="./images/mac.png" />
-						<h3>Coins-e</h3>
-						<p>
-							<a href="" class="btn btn-primary" role="button" target="_blank">Download</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+	<section class="section" id="exchanges">
+		
+	</section>
 		<!--
 		<div class="imgsContainer">
 			<img src="http://placehold.it/350x670" alt="iphone" id="iphone-two" />
@@ -268,32 +240,48 @@
 			<div class="box">
 				<h2>Contact us</h2>
 				
-				<div class="col-sm-6 col-md-4">
+				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
-						<img src="./images/source.png" />
 						<h3>Facebook</h3>
 						<p>
-							<img src="" />
+							<img src="./images/facebook.png" />
 						</p>
 					</div>
 				</div>
-				<div class="col-sm-6 col-md-4">
+				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
-						<img src="./images/windows.png" />
 						<h3>Twitter</h3>
-						<p></p>
 						<p>
-							<img src="" />
+							<img src="./images/twitter.png" />
 						</p>
+						<!--
+						<div id="twitter">
+							<a class="twitter-timeline" href="https://twitter.com/search?q=%23vootcoin+%23vootcloud+%23vootmarket" data-widget-id="486872268488732675">Tweets about "#vootcoin #vootcloud #vootmarket"</a>
+							<script>
+							!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+							</script>
+						</div>
+						-->
 					</div>
 				</div>
-				<div class="col-sm-6 col-md-4">
+				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
-						<img src="" />
 						<h3>Mail</h3>
 						<p>
-							<img scrc="" />
+							<img src="./images/mail.png" />
 						</p>
+					</div>
+				</div><div class="col-sm-6 col-md-3">
+					<div class="caption text-center">
+						<h3>Reddit</h3>
+						<p>
+							<img src="./images/reddit.png" />
+						</p>
+						<!--
+						<div id="reddit">
+							<script src="http://www.reddit.com/r/vootcoin.embed?limit=5" type="text/javascript"></script>
+						</div>
+						-->
 					</div>
 				</div>
 			</div>
@@ -306,18 +294,9 @@
 	</section>
 </div>
 
-<ul class="nav pull-right scroll-top">
-    <li><a class="" href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
-</ul>
-
 <script>
 $('a').smoothScroll();
 $('body').scrollSpy();
-
-/* smooth scrolling for scroll to top */
-$('.scroll-top').click(function() {
-	$('body,html').animate({scrollTop:0},1000);
-});
 </script>
 
 </body>
