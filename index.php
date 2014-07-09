@@ -45,7 +45,15 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
+			/* Downloads */
+			$('#dwnld').hide();
+			$('#source, #win, #app, #mobile').hide();
 		
+			/* Exchanges */
+			$('#exchange').hide();
+			$('#exchange1, #exchange2, #exchange3, #exchange4').hide();
+		
+			/* Contact */
 			$('#signup').hide();
 			$('#contact h2, #contact h3').hide();
 			$('#facebook, #twitter, #mail, #reddit').hide();
@@ -63,19 +71,28 @@
 				'navigationPosition': 'left',
 				'navigationTooltips': ['Home', 'Section1', 'Section2', 'Section3'],
 
-				'afterLoad': function(anchorLink, index){
-					/*
-					
+				'afterLoad': function(anchorLink, index){					
 					/* Downloads */
 					if(index == 3) {
 						setTimeout(function() {
-							$('#source, #windows, #mac, #linux').addClass('flip');
+							$('#src, #windows, #mac, #linux').addClass('flip');
+							$('#dwnld').fadeIn("slow", function() {});
+							$('#exchange').slideDown(450, function() {});							
 						}, 500);
+						
+						setTimeout(function() {
+							$('#source, #win, #app, #mobile').fadeIn("slow", function() {});
+						}, 550);
 					}
 					
 					/* Exchanges */
 					if(index == 4) {
-						
+						setTimeout(function() {
+							$('#exchange').slideDown(450, function() {});
+						}, 500);
+						setTimeout(function() {
+							$('#exchange1, #exchange2, #exchange3, #exchange4').fadeIn("slow", function() {});
+						}, 550);
 					}
 					
 					/* Contact */
@@ -92,16 +109,18 @@
 				},
 
 				'onLeave': function(index, nextIndex, direction){
-					if (index == 3 && direction == 'down'){
+					if (index == 3){
 						setTimeout(function() {
 							$('#source, #windows, #mac, #linux').removeClass('flip');
 						}, 500);
-					}
-					else if(index == 5 && direction == 'up'){
-						$('#facebook, #twitter, #mail, #reddit').hide();
-						$('#contact h2, #contact h3').hide();
+					} else if (index == 4) {
+						$('#exchange').fadeOut();
+						$('#exchange1, #exchange2, #exchange3, #exchange4').fadeOut();						
+					} else if(index == 5){
+						$('#facebook, #twitter, #mail, #reddit').fadeOut();
+						$('#contact h2, #contact h3').fadeOut();
 						$('#facebook, #twitter, #mail, #reddit').removeClass('flip');
-						$('#signup').hide();
+						$('#signup').fadeOut();
 					}
 				}
 			});
@@ -214,41 +233,41 @@
 	<section class="section moveDown" id="downloads">
 		<div class="intro">
 			<div class="box">
-				<h2>Downloads</h2>
+				<h2 id="dwnld">Downloads</h2>
 				<div class="col-sm-6 col-md-3">
-					<div class="caption text-center">
+					<div class="account-wall text-center" id="source">
 						<img id="src" src="./images/source.png" /img>
 						<h3>Source</h3>
 						<p>
-							<a href="" class="btn btn-primary" role="button" target="_blank">Develop</a>
+							<a href="https://github.com/MsCollec/vootcoin" class="btn btn-primary" role="button" target="_blank">Contribute</a>
 						</p>
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-3">
-					<div class="caption text-center">
+					<div class="account-wall text-center" id="win">
 						<img id="windows" src="./images/windows2.png" />
 						<h3>Windows</h3>
 						<p></p>
 						<p>
-							<a href="" class="btn btn-primary" role="button" target="_blank">Download</a>
+							<a href="https://mega.co.nz/#!QkcHEJYS!s9e03O7FntPcASdDE6I3OlsDcvC_4ZzGyzB-CL5i6Ms" class="btn btn-primary" role="button" target="_blank">Download</a>
 						</p>
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-3">
-					<div class="caption text-center">
+					<div class="account-wall text-center" id="app">
 						<img id="mac" src="./images/apple.png" />
 						<h3>Mac</h3>
 						<p>
-							<a href="" class="btn btn-primary" role="button" target="_blank">Download</a>
+							<a href="https://mega.co.nz/#!JYpGUCJT!2fVoFWmY3jqQpc1ybVmcQCCFkHNv7TRPpBxrDbSrxfQ" class="btn btn-primary" role="button" target="_blank">Download</a>
 						</p>
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-3">
-					<div class="caption text-center">
-						<img id="linux" src="./images/phone.png" />
+					<div class="account-wall text-center" id="mobile">
+						<img id="" src="./images/.png" />
 						<h3>Voot mobile</h3>
 						<p>
-							<a href="" class="btn btn-primary" role="button" target="_blank">Learn more</a>
+							<a href="http://coinremote.com/sms" class="btn btn-primary" role="button" target="_blank">Learn more</a>
 						</p>
 					</div>
 				</div>
@@ -256,35 +275,46 @@
 		</div>
 	</section>
 	<section class="section" id="exchanges">
-		<h2>Exchanges</h2>
+		<h2 id="exchange">Exchanges</h2>
 		<div class="row row-centered">
-			<div class="col-sm-6 col-md-3 col-centered">
-				<div class="thumbnail">
+			<div class="col-sm-6 col-md-3 col-centered" id="exchange1">
+				<div class="account-wall">
 					<img src="http://placehold.it/300x300" alt="...">
 					<div class="caption">
-						<h3>Bittrex</h3>
+						<h3>Exchange 1</h3>
 					<p>
 						<a href="#" class="btn btn-primary" role="button">Visit now</a>
 					</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-3 col-centered">
-				<div class="thumbnail">
+			<div class="col-sm-6 col-md-3 col-centered" id="exchange2">
+				<div class="account-wall">
 					<img src="http://placehold.it/300x300" alt="...">
 					<div class="caption">
-						<h3>Bittrex</h3>
+						<h3>Exchange 2</h3>
 					<p>
 						<a href="#" class="btn btn-primary" role="button">Visit now</a>
 					</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-3 col-centered">
-				<div class="thumbnail">
+			<div class="col-sm-6 col-md-3 col-centered" id="exchange3">
+				<div class="account-wall">
 					<img src="http://placehold.it/300x300" alt="...">
 					<div class="caption">
-						<h3>Bittrex</h3>
+						<h3>Exchange 3</h3>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Visit now</a>
+					</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-centered" id="exchange4">
+				<div class="account-wall">
+					<img src="http://placehold.it/300x300" alt="...">
+					<div class="caption">
+						<h3>Exchange 4</h3>
 					<p>
 						<a href="#" class="btn btn-primary" role="button">Visit now</a>
 					</p>
