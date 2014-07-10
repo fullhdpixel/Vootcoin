@@ -41,7 +41,7 @@
 	<script type="text/javascript" src="./js/fullPage.js"></script>
 	<script type="text/javascript" src="./js/script.js"></script>
 	<script type="text/javascript" src="./js/slimscroll.min.js"></script>
-	<script type="text/javascript" src="./js/smoothscroll.js"></script>
+	<script type="text/javascript" src="./js/smoothscroll.min.js"></script>
 	<script type="text/javascript" src="./js/backstretch.min.js"></script>
 	
 	<script type="text/javascript">
@@ -157,7 +157,7 @@
 	    <div class="slide" id="slide1" data-anchor="slide1">
 			<div class="container">
 				<h1>Vootcoin</h1>
-				<div class="col-sm-6 col-md-6">
+				<div class="col-sm-8 col-md-6">
 					<p>
 						PoW Algorithm: X11<br>
 						PoW + PoS.<br>
@@ -168,23 +168,34 @@
 						PoW Payout: 10000 per block.<br>
 						PoW Max Coins: 68,000,000<br>
 						PoS Interest: 10%<br>
-						
 					</p>
 					<a href="https://bitcointalk.org/index.php?topic=639371.0" target="_blank" class="btn btn-primary btn-large">Learn more</a>
 				</div>
-				<div class="col-sm-6 col-md-3">
+				<div class="col-sm-3 col-md-3">
 					<img id="phone" src="./images/phone.png" alt="vootmobile"/>
 				</div>
 			</div>
 		</div>
 	    <div class="slide" id="slide2" data-anchor="slide2">
 			<div class="container">
-				<h2>Decentralized Privacy Powered by NiteSend.</h2>
+				<h3>Decentralized Privacy<br> <small>Powered by NiteSend.</small></h3>
 				<div class="col-sm-6 col-md-6">
 					<p>
 						VootCoin powered by NiteSend provides high level anonymous layers to the transactions on the VootCoin network. With your privacy in mind, we have created a decentralized way of using digital currency.
 					</p>
+				<div class="col-sm-3 col-md-2">
+					<a href="https://bitcointalk.org/index.php?topic=639371.0" target="_blank" class="btn btn-primary btn-large">Community</a>
 				</div>
+				<div class="col-sm-1 col-md-1"></div>
+				<div class="col-sm-3 col-md-2">
+					<a href="https://bitcointalk.org/index.php?topic=639371.0" target="_blank" class="btn btn-primary btn-large">Roadmap</a>
+				</div>
+				<div class="col-sm-1 col-md-1"></div>
+				<div class="col-sm-3 col-md-2">
+					<a href="https://bitcointalk.org/index.php?topic=639371.0" target="_blank" class="btn btn-primary btn-small">Press</a>
+				</div>
+				</div>
+				<img id="vootlogo" src="./images/logo.png" alt="vootlogo"/>
 			</div>
 		</div>
 	</section>
@@ -283,44 +294,40 @@
 		<div class="row row-centered">
 			<div class="col-sm-6 col-md-3 col-centered" id="exchange1">
 				<div class="account-wall">
-					<img src="http://placehold.it/300x300" alt="...">
 					<div class="caption">
-						<h3>Exchange 1</h3>
+						<h3>Bittrex</h3>
 					<p>
-						<a href="#" class="btn btn-primary" role="button">Visit now</a>
+						<a href="https://bittrex.com/Market/?MarketName=BTC-VOOT" class="btn btn-primary" role="button">Visit now</a>
 					</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-3 col-centered" id="exchange2">
 				<div class="account-wall">
-					<img src="http://placehold.it/300x300" alt="...">
 					<div class="caption">
-						<h3>Exchange 2</h3>
+						<h3>Poloniex</h3>
 					<p>
-						<a href="#" class="btn btn-primary" role="button">Visit now</a>
+						<a href="https://poloniex.com/exchange/btc_voot" class="btn btn-primary" role="button">Visit now</a>
 					</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-3 col-centered" id="exchange3">
 				<div class="account-wall">
-					<img src="http://placehold.it/300x300" alt="...">
 					<div class="caption">
-						<h3>Exchange 3</h3>
+						<h3>Bluetrade</h3>
 					<p>
-						<a href="#" class="btn btn-primary" role="button">Visit now</a>
+						<a href="https://bleutrade.com/exchange/VOOT/BTC" class="btn btn-primary" role="button">Visit now</a>
 					</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-3 col-centered" id="exchange4">
 				<div class="account-wall">
-					<img src="http://placehold.it/300x300" alt="...">
 					<div class="caption">
-						<h3>Exchange 4</h3>
+						<h3>Coins-e</h3>
 					<p>
-						<a href="#" class="btn btn-primary" role="button">Visit now</a>
+						<a href="https://www.coins-e.com/exchange/VOOT_BTC" class="btn btn-primary" role="button">Visit now</a>
 					</p>
 					</div>
 				</div>
@@ -341,17 +348,17 @@
 				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
 						<h3>Facebook</h3>
-						<p>
-							<img id="facebook" src="./images/facebook.png" />
-						</p>
+							<a href="" target="_blank">
+								<img id="facebook" src="./images/facebook.png" />
+							</a>
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
 						<h3>Twitter</h3>
-						<p>
-							<img id="twitter" src="./images/twitter.png" />
-						</p>
+						<a href="https://twitter.com/vootcoin" target="_blank">
+							<img id="twitter" src="./images/twitter.png" alt="Twitter" />
+						</a>
 						<!--
 						<div id="twitter">
 							<a class="twitter-timeline" href="https://twitter.com/search?q=%23vootcoin+%23vootcloud+%23vootmarket" data-widget-id="486872268488732675">Tweets about "#vootcoin #vootcloud #vootmarket"</a>
@@ -365,17 +372,13 @@
 				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
 						<h3>Mail</h3>
-						<p>
-							<img id="mail" src="./images/mail.png" />
-						</p>
+						<img id="mail" src="./images/mail.png" />
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
 						<h3>Reddit</h3>
-						<p>
-							<img id="reddit" src="./images/reddit.png" />
-						</p>
+						<img id="reddit" src="./images/reddit.png" />
 						<!--
 						<div id="reddit">
 							<script src="http://www.reddit.com/r/vootcoin.embed?limit=5" type="text/javascript"></script>

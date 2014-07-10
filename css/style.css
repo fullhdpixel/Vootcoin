@@ -1,10 +1,60 @@
-@media (max-width:910px) {
+@font-face {
+    font-family: 'weblySleek';
+    src: url('../fonts/weblysleekuil.ttf');
+}
+
+@media screen and (max-width: 1050px) {
 	#features img {
-		max-width: 100px !important;
+		max-width: 125px !important;
+	}
+	
+	h1 {
+		font-size: 42px !important;
+	}
+	
+	h2 {
+		font-size: 36px !important;
+	}
+	
+	h3 {
+		font-size: 34px !important;
+	}
+	
+	p {
+		font-size: 18px !important;
+	}
+	
+	#about h1, #about p, #about a {
+		margin-left: 150px !important;
+	}
+	
+	#phone {
+		max-width: 150px !important;
+	}
+	
+	#vootlogo {
+		max-width: 150px !important;
 	}
 }
 
+
+
 @media (max-width:768px) {
+	nav {
+		display: none;
+	}
+	#about h1, #about p, #about a {
+		margin-left: 100px;
+	}
+	
+	#phone {
+		display: none !important;
+	}
+	
+	#vootlogo {
+		display: none !important;
+	}
+	
 	#features img {
 		max-width: 75px !important;
 	}
@@ -21,9 +71,9 @@
 body,html {
 	padding: 0;
 	margin: 0;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	font-family: "weblySleek", Helvetica, Arial, Verdana, sans-serif !important;
 	font-size: 14px;
-	min-width: 480px;   
+	min-width: 650px !important;   
 }
 
 h1 {
@@ -39,8 +89,13 @@ h2 {
 	font-family: arial,helvetica;
 }
 
+h3 {
+	font-size: 2.5em;
+}
+
 h3 small {
 	color: white;
+	font-family: 'weblySleek';
 }
 
 br {
@@ -58,6 +113,7 @@ nav  {
     height: 60px !important;
 	min-width: 100%;
     padding-top: 0;
+	font-family: 'weblySleek';
 }
 
 /* animations */
@@ -151,7 +207,7 @@ nav  {
 }
 
 /* About */
-#about {
+#about h1:first-child, #about p {
 	text-align: justify;
 }
 
@@ -163,8 +219,19 @@ nav  {
 	position: relative;
 	margin-top: -50px;
 	margin-left: 150px;
+	width: 250px;
+	height: auto;
 }
 
+#vootlogo {
+	margin-left: 50px;
+	max-width: 350px;
+	height: auto;
+}
+
+#slide2 a {
+	min-width: 100px;
+}
 /* Features */
 #features {
 }
@@ -196,6 +263,7 @@ nav  {
 #downloads img {
 	height: 100px;
 	width: auto;
+	cursor: pointer;
 }
 
 /* Exchanges */
@@ -206,6 +274,10 @@ nav  {
 /* Contact */
 #contact {
 
+}
+
+#contact img {
+	cursor: pointer;
 }
 
 /* Sign up */
