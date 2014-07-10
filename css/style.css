@@ -23,7 +23,7 @@ body,html {
 	margin: 0;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 	font-size: 14px;
-	min-width: 480px;
+	min-width: 480px;   
 }
 
 h1 {
@@ -39,6 +39,15 @@ h2 {
 	font-family: arial,helvetica;
 }
 
+h3 small {
+	color: white;
+}
+
+br {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
 /* navbar */
 nav  {
 	position: fixed;
@@ -47,6 +56,7 @@ nav  {
 	font-size: 22px !important;
     line-height: 60px !important;
     height: 60px !important;
+	min-width: 100%;
     padding-top: 0;
 }
 
@@ -84,7 +94,6 @@ nav  {
 }
 
 /* sliders */
-
 .homesliders h2, .homesliders p {
 	z-index: 99;
 }
@@ -131,12 +140,35 @@ nav  {
 	display: inline-block;
 }
 
+/* sections */
+#section0, #section1, #section2, #section3 {
+    background-size: cover;
+}
+
 .section {
 	text-align:center;
 	overflow:hidden;
 }
 
+/* About */
+#about {
+	text-align: justify;
+}
+
+#about p{
+	font-weight: 100 !important;
+}
+
+#phone {
+	position: relative;
+	margin-top: -50px;
+	margin-left: 150px;
+}
+
 /* Features */
+#features {
+}
+
 #features .row {
 	margin-top: 60px;
 }
@@ -154,6 +186,26 @@ nav  {
 #features img {
 	max-width: 150px;
 	height: auto;
+}
+
+/* Downloads */
+#downloads {
+
+}
+
+#downloads img {
+	height: 100px;
+	width: auto;
+}
+
+/* Exchanges */
+#exchanges {
+
+}
+
+/* Contact */
+#contact {
+
 }
 
 /* Sign up */

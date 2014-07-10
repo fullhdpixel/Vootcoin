@@ -41,10 +41,15 @@
 	<script type="text/javascript" src="./js/fullPage.js"></script>
 	<script type="text/javascript" src="./js/script.js"></script>
 	<script type="text/javascript" src="./js/slimscroll.min.js"></script>
-	<script type="text/javascript" src="./js/smoothscroll.min.js"></script>
+	<script type="text/javascript" src="./js/smoothscroll.js"></script>
+	<script type="text/javascript" src="./js/backstretch.min.js"></script>
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
+			
+		
+			$.backstretch("./images/3.jpg");
+			
 			/* Downloads */
 			$('#dwnld').hide();
 			$('#source, #win, #app, #mobile').hide();
@@ -62,22 +67,19 @@
 				'verticalCentered': true,
 				'autoScrolling': false,
 				'css3': true,
-				'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
 				'navigation': false,
 				'loopBottom': true,
 				'loopTop': true,
 				'easing': 'easeInQuart',
-				'sectionsColor': ['', '#2672EC', '#BF1E4B', '#2672EC', '#BF1E4B'],
 				'navigationPosition': 'left',
 				'navigationTooltips': ['Home', 'Section1', 'Section2', 'Section3'],
 
 				'afterLoad': function(anchorLink, index){					
 					/* Downloads */
-					if(index == 3) {
-						setTimeout(function() {
+					if (index == 3) {
+						setTimeout( function() {
 							$('#src, #windows, #mac, #linux').addClass('flip');
-							$('#dwnld').fadeIn("slow", function() {});
-							$('#exchange').slideDown(450, function() {});							
+							$('#dwnld').fadeIn("slow", function() {});			
 						}, 500);
 						
 						setTimeout(function() {
@@ -86,17 +88,17 @@
 					}
 					
 					/* Exchanges */
-					if(index == 4) {
+					if (index == 4) {
 						setTimeout(function() {
 							$('#exchange').slideDown(450, function() {});
-						}, 500);
+						}, 550);
 						setTimeout(function() {
 							$('#exchange1, #exchange2, #exchange3, #exchange4').fadeIn("slow", function() {});
-						}, 550);
+						}, 500);
 					}
 					
 					/* Contact */
-					if(index == 5) {
+					if (index == 5) {
 						setTimeout(function() {
 							$('#facebook, #twitter, #mail, #reddit').show();
 							$('#contact h2, #contact h3').slideDown(450, function() {});
@@ -110,24 +112,24 @@
 
 				'onLeave': function(index, nextIndex, direction){
 					if (index == 3){
-						setTimeout(function() {
-							$('#source, #windows, #mac, #linux').removeClass('flip');
-						}, 500);
+						$('#source, #windows, #mac, #linux').removeClass('flip');
+						$('#dwnld').fadeOut(200);
+						$('#source, #win, #app, #mobile').fadeOut(200);
 					} else if (index == 4) {
-						$('#exchange').fadeOut();
-						$('#exchange1, #exchange2, #exchange3, #exchange4').fadeOut();						
+						$('#exchange').fadeOut(200);
+						$('#exchange1, #exchange2, #exchange3, #exchange4').fadeOut(200);						
 					} else if(index == 5){
-						$('#facebook, #twitter, #mail, #reddit').fadeOut();
-						$('#contact h2, #contact h3').fadeOut();
+						$('#facebook, #twitter, #mail, #reddit').fadeOut(200);
+						$('#contact h2, #contact h3').fadeOut(200);
 						$('#facebook, #twitter, #mail, #reddit').removeClass('flip');
-						$('#signup').fadeOut();
+						$('#signup').fadeOut(200);
 					}
 				}
 			});
 		});
 	</script>
 </head>
-<body data-spy="scroll" data-offset="0">
+<body data-spy="scroll" data-offset="100">
 
 <nav class="navbar-default navbar-static-top navbar-trans" role="navigation">
 	<div class="container-fluid">
@@ -153,41 +155,43 @@
 <div id="content">
 	<section class="homeslider section" id="about">
 	    <div class="slide" id="slide1" data-anchor="slide1">
-			<div class="intro">
-				<img src="./images/1.jpg" alt="background1" />
-				<h1>Specifications</h1>
-				<p>
-					PoW Algorithm: X11<br>
-					PoW + PoS.<br>
-					60 second block time<br>
-					30 confirmations for blocks to mature.<br>
-					Re-target difficulty each block.<br>
-					PoW Total Blocks: 10080 PoW blocks.<br>
-					PoW Payout: 10000 per block.<br>
-					PoW Max Coins: 68,000,000<br>
-					PoS Interest: 10%<br>
-				</p>
+			<div class="container">
+				<h1>Vootcoin</h1>
+				<div class="col-sm-6 col-md-6">
+					<p>
+						PoW Algorithm: X11<br>
+						PoW + PoS.<br>
+						60 second block time<br>
+						30 confirmations for blocks to mature.<br>
+						Re-target difficulty each block.<br>
+						PoW Total Blocks: 10080 PoW blocks.<br>
+						PoW Payout: 10000 per block.<br>
+						PoW Max Coins: 68,000,000<br>
+						PoS Interest: 10%<br>
+						
+					</p>
+					<a href="https://bitcointalk.org/index.php?topic=639371.0" target="_blank" class="btn btn-primary btn-large">Learn more</a>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<img id="phone" src="./images/phone.png" alt="vootmobile"/>
+				</div>
 			</div>
 		</div>
 	    <div class="slide" id="slide2" data-anchor="slide2">
-			<img src="./images/2.jpg" />
-			<h1>Decentralized Privacy Powered by NiteSend.</h1>
-			<p>
-				VootCoin powered by NiteSend provides high level anonymous layers to the transactions on the VootCoin network. With your privacy in mind, we have created a decentralized way of using digital currency.
-			</p>
-		</div>
-		<div class="slide" id="slide3" data-anchor="slide3">
-			<img src="./images/3.jpg" />
-			<h1>Slide 3</h1>
-		</div>
-		<div class="slide" id="slide4" data-anchor="slide4">
-			<img src="./images/4.jpg" />
-			<h1>Slide 4</h1>
+			<div class="container">
+				<h2>Decentralized Privacy Powered by NiteSend.</h2>
+				<div class="col-sm-6 col-md-6">
+					<p>
+						VootCoin powered by NiteSend provides high level anonymous layers to the transactions on the VootCoin network. With your privacy in mind, we have created a decentralized way of using digital currency.
+					</p>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section class="section" id="features">
 		<div class="container">
 			<div class="row">
+				<br>
 				<h2>Features</h2>
 				<h3><small>Everything a VootCoin user needs to meet core security objectives more effectively.</small></h3>
 			</div>
@@ -236,7 +240,7 @@
 				<h2 id="dwnld">Downloads</h2>
 				<div class="col-sm-6 col-md-3">
 					<div class="account-wall text-center" id="source">
-						<img id="src" src="./images/source.png" /img>
+						<img id="src" src="./images/github.png" /img>
 						<h3>Source</h3>
 						<p>
 							<a href="https://github.com/MsCollec/vootcoin" class="btn btn-primary" role="button" target="_blank">Contribute</a>
@@ -264,7 +268,7 @@
 				</div>
 				<div class="col-sm-6 col-md-3">
 					<div class="account-wall text-center" id="mobile">
-						<img id="" src="./images/.png" />
+						<img id="" src="./images/phone2.png" />
 						<h3>Voot mobile</h3>
 						<p>
 							<a href="http://coinremote.com/sms" class="btn btn-primary" role="button" target="_blank">Learn more</a>
