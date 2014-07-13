@@ -11,7 +11,6 @@
 	<meta name="author" content="Fullhdpixel" />
 	<meta name="description" content="" />
 	<meta name="keywords"  content="" />
-	<meta name="Resource-type" content="Document" />
 	
 	<!-- Jquery -->
 	<script src="./lib/js/jquery-2.1.1.min.js"></script>
@@ -48,7 +47,7 @@
 		$(document).ready(function() {
 			
 		
-			$.backstretch("./images/3.jpg");
+			$.backstretch("./images/background.png");
 			
 			/* Downloads */
 			$('#dwnld').hide();
@@ -135,11 +134,12 @@
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
 	</div>
 	<div class="collapse navbar-collapse" id="myScrollspy">
 		<ul class="nav navbar-nav nav-justified">
@@ -154,7 +154,31 @@
 
 <div id="content">
 	<section class="homeslider section" id="about">
-	    <div class="slide" id="slide1" data-anchor="slide1">
+	    <div class="slide" id="firstslide1" data-anchor="slide1">
+			<div class="container">
+				<h1>Decentralized Privacy</h1>
+				
+				<h2><small>Powered by NiteSend.</small></h2>
+				<div class="col-sm-6 col-md-6">
+					<p>
+						VootCoin powered by NiteSend provides high level anonymous layers to the transactions on the VootCoin network. With your privacy in mind, we have created a decentralized way of using digital currency.
+					</p>
+				<div class="col-sm-3 col-md-2">
+					<a href="https://bitcointalk.org/index.php?topic=639371.0" target="_blank" class="btn btn-primary btn-large">Community</a>
+				</div>
+				<div class="col-sm-1 col-md-1"></div>
+				<div class="col-sm-3 col-md-2">
+					<a href="https://bitcointalk.org/index.php?topic=639371.0" target="_blank" class="btn btn-primary btn-large">Roadmap</a>
+				</div>
+				<div class="col-sm-1 col-md-1"></div>
+				<div class="col-sm-3 col-md-2">
+					<a href="https://bitcointalk.org/index.php?topic=639371.0" target="_blank" class="btn btn-primary btn-small">Press</a>
+				</div>
+				</div>
+				<img id="vootlogo" src="./images/logo.png" alt="vootlogo"/>
+			</div>
+		</div>
+		<div class="slide" id="firstslide2" data-anchor="slide2">
 			<div class="container">
 				<h1>Vootcoin</h1>
 				<div class="col-sm-8 col-md-6">
@@ -176,27 +200,11 @@
 				</div>
 			</div>
 		</div>
-	    <div class="slide" id="slide2" data-anchor="slide2">
-			<div class="container">
-				<h3>Decentralized Privacy<br> <small>Powered by NiteSend.</small></h3>
-				<div class="col-sm-6 col-md-6">
-					<p>
-						VootCoin powered by NiteSend provides high level anonymous layers to the transactions on the VootCoin network. With your privacy in mind, we have created a decentralized way of using digital currency.
-					</p>
-				<div class="col-sm-3 col-md-2">
-					<a href="https://bitcointalk.org/index.php?topic=639371.0" target="_blank" class="btn btn-primary btn-large">Community</a>
-				</div>
-				<div class="col-sm-1 col-md-1"></div>
-				<div class="col-sm-3 col-md-2">
-					<a href="https://bitcointalk.org/index.php?topic=639371.0" target="_blank" class="btn btn-primary btn-large">Roadmap</a>
-				</div>
-				<div class="col-sm-1 col-md-1"></div>
-				<div class="col-sm-3 col-md-2">
-					<a href="https://bitcointalk.org/index.php?topic=639371.0" target="_blank" class="btn btn-primary btn-small">Press</a>
-				</div>
-				</div>
-				<img id="vootlogo" src="./images/logo.png" alt="vootlogo"/>
-			</div>
+		<div class="slide" id="firstslide3" data-anchor="slide2">
+			<img src="./images/tor.png" alt="..."/>
+		</div>
+		<div class="slide" id="firstslide4" data-anchor="slide2">
+			<img src="./images/vootcloud.png" alt="..." />
 		</div>
 	</section>
 	<section class="section" id="features">
@@ -204,29 +212,29 @@
 			<div class="row">
 				<br>
 				<h2>Features</h2>
-				<h3><small>Everything a VootCoin user needs to meet core security objectives more effectively.</small></h3>
+				<p>Everything a VootCoin user needs to meet core security objectives more effectively.</p>
 			</div>
 		</div>
-		<div class="slide" id="slide1" data-anchor="slide1">
+		<div class="slide" id="secondslide1" data-anchor="slide1">
 			<div class="container">
 				<h2>Decentralized Anonymity</h2>
-				<img class="bounceUp" src="./images/anon.png" />
+				<img class="bounceUp" src="./images/anon.png" alt="anon" />
 				<p>
 					Crypto-currencies are based on a blockchain and non-anonymity; transactions are always signed by the coin owner and thus the transaction chain includes information of the coin origins. There have been suggestions to hide this information
 					and one already supported but not implemented is CoinJoin based transaction grouping. Nitesend is a decentralized implementation of this proposal.
 				</p>
 			</div>
 		</div>
-		<div class="slide" id="slide2" data-anchor="slide2">
+		<div class="slide" id="secondslide2" data-anchor="slide2">
 			<div class="container">
 				<h2>VootMarket</h2>
-				<img src="./images./vootmarket.png" alt="VootMarket" />
+				<img src="./images/vootmarket.png" alt="VootMarket" />
 				<p>
 					VootMarket will be a fully operational decentralized marketplace using anonymous P2P payments in VootCoin. The marketplace will be a place to buy and sell goods from all over the world in a safe, open-source environment with an integrated escrow system based on a Web of Trust (WoT).
 				</p>
 			</div>
 		</div>
-		<div class="slide" id="slide3" data-anchor="slide3">
+		<div class="slide" id="secondslide3" data-anchor="slide3">
 			<div class="container">
 				<h2>VootPay</h2>
 				<img src="./images/vootpay.png" alt="VootPay" />
@@ -235,7 +243,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="slide" id="slide4" data-anchor="slide4">
+		<div class="slide" id="secondslide4" data-anchor="slide4">
 			<div class="container">
 				<h2>Secure Network</h2>
 				<img src="./images/secure.png" alt="Secure Network" />
@@ -251,7 +259,7 @@
 				<h2 id="dwnld">Downloads</h2>
 				<div class="col-sm-6 col-md-3">
 					<div class="account-wall text-center" id="source">
-						<img id="src" src="./images/github.png" /img>
+						<img id="src" src="./images/github.png" alt="github" />
 						<h3>Source</h3>
 						<p>
 							<a href="https://github.com/MsCollec/vootcoin" class="btn btn-primary" role="button" target="_blank">Contribute</a>
@@ -260,7 +268,7 @@
 				</div>
 				<div class="col-sm-6 col-md-3">
 					<div class="account-wall text-center" id="win">
-						<img id="windows" src="./images/windows2.png" />
+						<img id="windows" src="./images/windows2.png" alt="windows" />
 						<h3>Windows</h3>
 						<p></p>
 						<p>
@@ -270,7 +278,7 @@
 				</div>
 				<div class="col-sm-6 col-md-3">
 					<div class="account-wall text-center" id="app">
-						<img id="mac" src="./images/apple.png" />
+						<img id="mac" src="./images/apple.png" alt="apple" />
 						<h3>Mac</h3>
 						<p>
 							<a href="https://mega.co.nz/#!JYpGUCJT!2fVoFWmY3jqQpc1ybVmcQCCFkHNv7TRPpBxrDbSrxfQ" class="btn btn-primary" role="button" target="_blank">Download</a>
@@ -279,7 +287,7 @@
 				</div>
 				<div class="col-sm-6 col-md-3">
 					<div class="account-wall text-center" id="mobile">
-						<img id="" src="./images/phone2.png" />
+						<img src="./images/phone2.png" alt="phone" />
 						<h3>Voot mobile</h3>
 						<p>
 							<a href="http://coinremote.com/sms" class="btn btn-primary" role="button" target="_blank">Learn more</a>
@@ -339,7 +347,6 @@
 			<img src="http://placehold.it/350x670" alt="iphone" id="iphone-two" />
 		</div>
 		-->
-	</section>
 	<section class="section" id="contact">
 		<div class="intro">
 			<div class="box">
@@ -348,9 +355,9 @@
 				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
 						<h3>Facebook</h3>
-							<a href="" target="_blank">
-								<img id="facebook" src="./images/facebook.png" />
-							</a>
+						<a href="" target="_blank">
+							<img id="facebook" src="./images/facebook.png" alt="facebook" />
+						</a>
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-3">
@@ -372,13 +379,13 @@
 				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
 						<h3>Mail</h3>
-						<img id="mail" src="./images/mail.png" />
+						<img id="mail" src="./images/mail.png" alt="mail" />
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-3">
 					<div class="caption text-center">
 						<h3>Reddit</h3>
-						<img id="reddit" src="./images/reddit.png" />
+						<img id="reddit" src="./images/reddit.png" alt="reddit" />
 						<!--
 						<div id="reddit">
 							<script src="http://www.reddit.com/r/vootcoin.embed?limit=5" type="text/javascript"></script>
@@ -413,9 +420,18 @@
 	</section>
 </div>
 
-<script>
+<script type="text/javascript">
 $('a').smoothScroll();
 $('body').scrollSpy();
+
+var sc_project=9912153; 
+var sc_invisible=1; 
+var sc_security="9660cdd0"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
 </script>
 
 </body>
